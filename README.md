@@ -7,22 +7,22 @@ Renders [Wikimedia-style links](https://www.mediawiki.org/wiki/Help:Links#Intern
 Install this into your project:
 
 ```bash
-npm --save install markdown-it-wikilinks
+npm --save install @tomleesm/markdown-it-wikilinks
 ```
 
 ...and *use* it:
 
 ```js
-const wikilinks = require('markdown-it-wikilinks')(options)
+const wikilinks = require('@tomleesm/markdown-it-wikilinks')(options)
 const md = require('markdown-it')()
     .use(wikilinks)
-    .render('Click [[Wiki Links|here]] to learn about [[/Wiki]] links.')
+    .render('Click [[Wiki Links]] to learn about [[Wiki]] links.')
 ```
 
 **Output:**
 
 ```html
-<p>Click <a href="./Wiki_Links.html">here</a> to learn about <a href="/Wiki.html">Wiki</a> links.</p>
+<p>Click <a href="./Wiki_Links.html">Wiki Links</a> to learn about <a href="./Wiki.html">Wiki</a> links.</p>
 ```
 
 ## Options
@@ -36,8 +36,8 @@ The base URL for absolute wiki links.
 ```js
 const html = require('markdown-it')()
   .use(require('markdown-it-wikilinks')({ baseURL: '/wiki/' }))
-  .render('[[/Main Page]]')
-  // <p><a href="/wiki/Main_Page.html">Main Page</a></p>
+  .render('[[Main Page]]')
+  // <p><a href="./wiki/Main_Page.html">Main Page</a></p>
 ```
 
 ### `relativeBaseURL`
