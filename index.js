@@ -20,7 +20,7 @@ module.exports = (options) => {
         .split("/")
         .map(sanitize)
         .join("/");
-      pageName = pageName.replace(/\s+/, "_");
+      pageName = pageName.replace(/\s/g, "_");
       return pageName;
     },
     postProcessLabel: (label) => {
