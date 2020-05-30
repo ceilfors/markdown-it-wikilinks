@@ -1,5 +1,5 @@
 {
-  "name": "@tomleesm/markdown-it-wikilinks",
+  "name": "@ceilfors/markdown-it-wikilinks",
   "version": "1.1.1",
   "description": "WikiMedia-style links for the markdown-it parser",
   "main": "index.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tomleesm/markdown-it-wikilinks.git"
+    "url": "git+https://github.com/ceilfors/markdown-it-wikilinks.git"
   },
   "keywords": [
     "markdown-it-plugin",
