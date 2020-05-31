@@ -41,7 +41,7 @@ module.exports = (options) => {
     return str.replace(/^\/+/g, "");
   }
 
-  return Plugin(/\[\[([\s\S/]+)(\|([\s\S/]+))?\]\]/, (match, utils) => {
+  return Plugin(/\[\[([^\]]+)(\|([^\]]+))?\]\]/, (match, utils) => {
     let label = "";
     let pageName = "";
     let href = "";
